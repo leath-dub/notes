@@ -5,7 +5,7 @@ layout: default
   <h3>{{ tag[0] }}</h3>
   <ul>
     {% for post in tag[1] %}
-      [{{ post.title }}]({{ site.baseurl/post.url }})
+      [{{ post.title }}]({{ site.baseurl }}/{{ post.url }})
     {% endfor %}
   </ul>
 {% endfor %}
