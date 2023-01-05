@@ -4,8 +4,13 @@
 @import "{{ site.theme }}";
 
 /* font import */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+}
 
 body {
-  font: "Fira Sans Regular" !important;
+  font: "Fira Sans" !important;
 }
