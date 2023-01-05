@@ -2,8 +2,8 @@
 layout: default
 ---
 {% for tag in site.tags %}
-  # {{ tag[0] }}
+## Unsorted
   {% for post in tag[1] %}
-* [{{post.title }}]({{ site.baseurl }}{{ post.url }})
+> [{{post.title }}]({{ site.baseurl }}{{ post.url }})
   {% endfor %}
 {% endfor %}
