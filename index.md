@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: default
 ---
 {% for tag in site.tags %}
-## Unsorted
+## {{ tag[0] }}
   {% for post in tag[1] %}
 > [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
   {% endfor %}
