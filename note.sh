@@ -8,7 +8,7 @@ read new_note
 current_date=$(date -I)
 new_note="${current_date}-${new_note}.md"
 
-nvim - +"file _posts/$new_note | 4j | startinsert!" <<EOF
+nvim - +"file _posts/$new_note | set filetype=markdown | 4j | startinsert!" <<EOF
 ---
 layout: post
 author: Cathal O'Grady
@@ -29,7 +29,7 @@ handle_response() {
     printf "commit & push [Y/n]: "
     read response
     handle_response $response && {
-        git add $new_note
+        git add _posts/$new_note
         git commit -a && git push
     }
 }
